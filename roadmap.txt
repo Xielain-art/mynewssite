@@ -1,7 +1,10 @@
 Сделать обработку форм через AJAX;
-Подключить CKEditor;
+Подключить CKEditor;(https://django-ckeditor.readthedocs.io/en/latest/)
 Реализовать поиск по сайту;
+(https://evileg.com/ru/post/21/
+https://pocoz.gitbooks.io/django-v-primerah/content/rasshirenie-prilozheniya-blog/dobavlenie-poiskovoj-sistemy-s-solr-i-haystack/sozdanie-predstavleniya-poiska.html)
 Добавить блог;
+попробовать реализовать чат;
 Добавить облако тегов;
-Добавить разрешения и группы для пользователей;
+Добавить разрешения и группы для пользователей;(https://djbook.ru/rel1.9/topics/auth/default.html)
 Добавить капчу;
