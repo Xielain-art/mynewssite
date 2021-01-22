@@ -1,0 +1,9 @@
+{% extends 'registration/base.html' %}
+{% block title %}
+    Выход
+{% endblock %}
+{% block main %}
+    <p>Вы вышли</p>
+    <a href="{% url 'login' %}">Войти снова?</a>
+    <a href="{% url 'index' %}">Главная страница</a>
+{% endblock %}

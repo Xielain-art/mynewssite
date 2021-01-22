@@ -1,0 +1,28 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+{% block main %}
+    <h1>Регистрация</h1>
+    <div class="alert alert-danger animate__animated animate__fadeIn" id ='login_alert' role="alert" style="display: none">
+        Введенный логин занят
+    </div>
+    <div class="alert alert-danger animate__animated animate__fadeIn" id ='password_alert' role="alert" style="display: none">
+        Пароли не совпадают
+    </div>
+    <form method="post" id='post-form'>
+
+        {% csrf_token %}
+        {{ form|crispy }}
+        Сложность пароля
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+        <button class="btn btn-primary my-3 " id="submitreg" type="submit">Зарегестрироваться</button>
+    </form>
+    <button class="btn  btn-primary" id="get_ajax">GET NUM</button>
+
+
+{% endblock %}

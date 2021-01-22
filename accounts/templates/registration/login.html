@@ -1,0 +1,31 @@
+{% extends 'registration/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Войти
+{% endblock %}
+
+{% block main %}
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Войдите в свой аккаунт</h4>
+
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+
+                {{ form|crispy }}
+
+                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+
+            </form>
+            <div class="card-footer">
+                <a class="btn btn-primary mt-3" href="{% url 'register' %}">Зарегестрироваться</a>
+                <a class="btn btn-primary mt-3" href="{% url 'password_reset' %}">Забыли пароль?</a>
+                <a class="btn btn-primary mt-3" href="{% url 'index' %}">Главная страница</a>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+{% endblock %}
